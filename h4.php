@@ -23,3 +23,13 @@
     echo "<br> $time";
 
     //opdracht 3
+    $y = 10;
+    $x = 15;
+
+    if ($y >= $x) {
+        $result = $y * 2 + $x;
+        echo $result;
+    } else if ($x >= $y) {
+        $result = $x * 2 + $y;
+        echo "<br> Uitkomst is: $result";
+    }
