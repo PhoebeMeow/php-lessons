@@ -73,6 +73,18 @@
     }
 
     //opdracht 7
-    $spaargeld = 250;
+    $spaargeld = 1100;
     $iphone = 1000;
-    if ($spaargeld < $iphone)
+    $neededMoney = $iphone - $spaargeld;
+
+    if ($neededMoney <= 250 && $neededMoney >= 0) {
+        echo "<br> Je spaargeld is nu: $spaargeld euro, je komt dus $neededMoney euro te kort! Je kan beter nog even een baantje gaan zoeken.";
+   } else if ($neededMoney <= 0) {
+        $leftOver = $spaargeld - $iphone;
+        echo "<br> Je spaargeld is nu: $spaargeld euro, hiermee is het mogelijk om de iPhone te kopen! Je hebt nog $leftOver euro over voor bijvoorbeeld een hoesje.";
+    }
+
+    echo $neededMoney <= 0;
+
+    //opdracht 8
+    
