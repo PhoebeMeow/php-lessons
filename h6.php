@@ -51,9 +51,28 @@
 
     echo "<br> De oppervlakte van een cirkel met straal 5 is: ";
     echo oppervlakte($pi, $straal);
+    echo "<br>";
 
     //opdracht 5
+    $s = 5.5; //Lengte van het remspoor in meters
+    $a = sqrt(($s / 2)); // a = (s^2 / (2 * s )
+    $aKmPerH = $a * 3.6; // 1 m/s^2 = 3.6 km/h^2
+    $aRounded = round($aKmPerH);
 
+    echo "De remvertraging is ongeveer " . $aRounded . " km/h";
+
+    echo "<br>";
+
+
+    //odpracht 6
+    //0.93 euro wisselkoers
+    $d = 86.74;
+    function euro($d) {
+    number_format()
+
+    }
+
+    echo euro($d);
 ?>
 
 
