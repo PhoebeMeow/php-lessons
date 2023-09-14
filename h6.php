@@ -68,11 +68,23 @@
     //0.93 euro wisselkoers
     $d = 86.74;
     function euro($d) {
-    number_format()
+        $euros = $d / 0.93;
+        echo "$" . $d . " is gelijk aan €";
+        echo number_format($euros, 2);
+        echo "<br>";
 
     }
 
     echo euro($d);
+
+    //opdracht 7
+
+    function math() {
+       echo "5 x 5 x 5 = " . pow(5, 3) . "<br>";
+
+    }
+
+    echo math();
 ?>
 
 
