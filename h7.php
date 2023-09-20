@@ -33,3 +33,13 @@
 <?php echo $melding; ?>
 
 
+<?php
+    //opdracht 2
+        if(isset($_POST['uitrekenen']) {
+            $operator = $_POST['operator'];
+            $getal1 = $_POST['getal1'];
+            $getal2 = $_POST['getal2'];
+        }
+
+
+
