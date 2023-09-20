@@ -39,7 +39,48 @@
             $operator = $_POST['operator'];
             $getal1 = $_POST['getal1'];
             $getal2 = $_POST['getal2'];
+            switch($operator) {
+                case "plus" : $antw = $getal1 . " + " . $getal2 . " = " . ($getal1 + $getal2); break;
+                case "min" : $antw = $getal1 . " - " . $getal2 . " = " . ($getal1 - $getal2); break;
+                case "keer" : $antw = $getal1 . " x " . $getal2 . " = " . ($getal1 * $getal2); break;
+                case "deel" : $antw = $getal1 . " / " . $getal2 . " = " . ($getal1 / $getal2); break;
+            }
+        } else {
+            $antw = "";
         }
+?>
 
+<form method="post" action="">
+
+    <label>Getal 1</label>
+    <input type="text" name="getal1">
+
+    <br>
+
+    <input class="nostyle" type="radio" name="operator" value="plus">Optellen
+    <input class="nostyle" type="radio" name="operator" value="min">Aftreken
+    <input class="nostyle" type="radio" name="operator" value="keer">Vermenigvuldigen
+    <input class="nostyle" type="radio" name="operator" value="deel">Delen
+
+    <br>
+
+    <label>Getal 2</label>
+    <input type="text" name="getal2">
+    <br>
+
+    <br>
+
+    <input  type="submit" name="uitrekenen" value="Berekenen">
+</form>
+
+<br><br>
+
+<?php
+    echo $antw;
+    ?>
+
+<?php
+    //opdracht 3
+        
 
 
