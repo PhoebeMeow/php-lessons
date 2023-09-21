@@ -30,12 +30,10 @@
 
 <br><br>
 
-<?php echo $melding; ?>
-
 
 <?php
     //opdracht 2
-        if(isset($_POST['uitrekenen']) {
+        if(isset($_POST['uitrekenen'])) {
             $operator = $_POST['operator'];
             $getal1 = $_POST['getal1'];
             $getal2 = $_POST['getal2'];
@@ -80,7 +78,34 @@
     ?>
 
 <?php
-    //opdracht 3
+    //opdracht 6
+    session_start();
+    if(!isset($_SESSION['numbers'])) {
+        $_SESSION['numbers'] = array();
+    }
+    var_dump($_POST);
+        if(isset($_POST['gemiddelde_uitrekenen'])) {
+
+            $number = filter_input(INPUT_POST, "cijfer", FILTER_SANITIZE_NUMBER_INT);
+            $_SESSION['numbers'][] = $number;
+        }
+        ?>
+<form method="post" action="">
+    <label>Cijfer: </label>
+    <input type="text" name=cijfer>
+    <br>
+    <input type="submit" name="gemiddelde_uitrekenen" value="Toevoegen">
+</form>
+
+<?php
+var_dump($_SESSION['numbers']);
+?>
+
+
+
+<?php
+    //opdracht 8
+
         
 
 
