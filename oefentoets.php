@@ -27,7 +27,9 @@
 //opdracht 1
     if(isset ($_POST['uitrekenen'])) {
         $amount = filter_input(INPUT_POST, 'amount', FILTER_VALIDATE_INT);
-
+        $handdoek = $_POST['keuze'];
+        $broek = $_POST['keuze'];
+        $shirt = $_POST['keuze'];
         if(!$amount) {
             echo "Voer een getal in";
         }
