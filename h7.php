@@ -83,7 +83,6 @@
     if(!isset($_SESSION['numbers'])) {
         $_SESSION['numbers'] = array();
     }
-    var_dump($_POST);
         if(isset($_POST['gemiddelde_uitrekenen'])) {
 
             $number = filter_input(INPUT_POST, "cijfer", FILTER_SANITIZE_NUMBER_INT);
@@ -98,7 +97,9 @@
 </form>
 
 <?php
-var_dump($_SESSION['numbers']);
+$amountNumbers = count($_SESSION['numbers']);
+
+echo "Aantal ingevoerde cijfers: " . $amountNumbers;
 ?>
 
 
