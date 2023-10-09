@@ -6,7 +6,7 @@
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
         foreach($result as &$data) {
-            echo "<a href=detail.php?id=" . $data['id'] . "<br>";
+            echo "<a href=detailpage-h9.php?id=" . $data['id'] . "<br>";
                 echo $data["merk"] . " " . $data["type"];
                 echo "</a>";
                 echo "<br>";
