@@ -23,6 +23,17 @@
     } else {
         $alert = "";
     }
+
+    postive();
+    function postive() {
+        echo "<label>Positivity:</label> <br> " . "I can do this";
+    }
+
+
+    if(isset($_POST['continue'])) {
+        $positive = $_POST['positive'];
+        echo "<br>" . $positive;
+    }
 ?>
 
 <!doctype html>
@@ -36,10 +47,36 @@
 </head>
 <body>
     <form method="post" action="">
+        <input type="text" name="positive" required>
+        <input type="submit" name="continue" value="Postive">
+    </form>
+    <br> <br>
+    <form method="post" action="">
         Name: <input type="text" name="name">
         <input type="submit" name="submit" value="Submit">
     </form>
+    <br><br>
 
     <?= $alert ?>
+    <form method="post" action="">
+        <label>The Owl Company</label><br>
+        First name: <input type="text" name="name" placeholder="First Name"> <br>
+        Last name: <input type="text" name="lname" placeholder="Last Name"> <br>
+        Email: <input type="text" name="email" placeholder="Email"> <br>
+        <input type="submit" name="continue" value="Send">
+    </form>
 </body>
 </html>
+
+
+
+<?php
+    date_default_timezone_set("Europe/Amsterdam");
+    $time = date("H:i:s");
+    $date = date("j F Y");
+    echo "------------- <br>";
+    echo "| " . $time . " | <br>";
+    echo "------------- <br>";
+    echo $date;
+?>
+
