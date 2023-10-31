@@ -55,31 +55,19 @@
 
 ?>
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <form method="post" action="">
-        <label>IPhone</label>
-
-        <br>
-
-        Versie: <input class="nonstyle" type="text" name="version">
-
-        <br>
-
-        Kleur: <input class="nonstyle" type="text" name="color">
-    </form>
-</body>
-</html>
-
-
 <?php
 //opdracht 2
+
+session_start();
+echo "U heeft voor de IPhone versie: " . $_SESSION['version'] . " gekozen. <br>";
+
+echo "U heeft de IPhone kleur: " . $_SESSION['color'] . " gekozen. <br>";
+
+echo "U bent: " . $_SESSION['fname'] . " " . $_SESSION['lname'] . "<br>";
+
+echo "Uw ingevoerde email is: " . $_SESSION['email'] . "<br>";
+
+echo "Uw address is: " . $_SESSION['street'] . " in " . $_SESSION['residence'] . " met de postcode: " . $_SESSION['zipcode'];
+
+
 ?>
